@@ -1,0 +1,23 @@
+import ProyectosGrid from '@/components/ProyectosGrid'
+import FinanciamientoTabla from '@/components/FinanciamientoTabla'
+
+export default function ProyectosPage() {
+  return (
+    <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 py-10 w-full space-y-10">
+      <div>
+        <p className="text-xs uppercase tracking-widest text-red-600 font-semibold mb-2">Proyectos de inversión público-privada</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">Cartera de proyectos</h1>
+        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mb-6">
+          Iniciativas en Mejillones, Hornitos y Michilla priorizadas por la Mesa de Convergencia. El estado de cada
+          proyecto se marca como &ldquo;Por confirmar&rdquo; cuando aún no hay una fuente que lo confirme.
+        </p>
+        <ProyectosGrid />
+      </div>
+
+      <div>
+        <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-4">Financiamiento público y privado</h2>
+        <FinanciamientoTabla />
+      </div>
+    </main>
+  )
+}

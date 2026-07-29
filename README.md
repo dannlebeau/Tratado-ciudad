@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mejillones 2050 — Acuerdo de Ciudad
 
-## Getting Started
+Panel de seguimiento del proceso de Acuerdo de Ciudad de Mejillones: una alianza entre
+[Fundación Huella Local](https://huellalocal.cl) y Corporación Ciudades, junto a la
+Mesa de Convergencia (Municipalidad de Mejillones + 12 empresas del sector privado),
+para construir junto a la comunidad la ciudad que Mejillones quiere ser hacia 2050.
 
-First, run the development server:
+Fase 1 de la plataforma: panel interno de seguimiento del proceso. Los datos (deriva­
+dos de la presentación del proyecto) viven como TypeScript estático en `lib/`, sin
+base de datos ni autenticación.
+
+## Contenido
+
+- `/` — resumen del Acuerdo de Ciudad, cronograma del proceso (mayo → diciembre) y
+  avance del financiamiento del proceso.
+- `/encuentros` — los 4 Encuentros participativos (diagnóstico → visión → imagen
+  objetivo → compromisos), cada uno con su pregunta guía.
+- `/proyectos` — cartera de proyectos de inversión público-privada en Mejillones,
+  Hornitos y Michilla, filtrable por ubicación, más la tabla de financiamiento
+  público y privado por estado (a diciembre 2025).
+- `/mesa-de-convergencia` — quiénes financian y ejecutan: sector privado, gobierno
+  local y el articulador de la alianza.
+
+Algunos proyectos de la cartera quedan marcados como **"Por confirmar"**: el estado
+solo se completa cuando la fuente de origen lo confirma explícitamente, en vez de
+inventarlo.
+
+## Stack
+
+Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4. Mismo stack que
+el resto de los proyectos de Huella Local en este workspace.
+
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Fase 2** (no implementada aún): plataforma pública participativa — la comunidad
+interactúa durante los encuentros en vivo (comentarios, votación de prioridades),
+lo que requerirá persistencia real (base de datos) y, si se quiere un mapa
+interactivo real, coordenadas geográficas para los proyectos de la cartera (hoy son
+pines numerados sobre una imagen del proceso, no lat/lng).
