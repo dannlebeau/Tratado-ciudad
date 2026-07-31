@@ -6,6 +6,7 @@ const LINKS = [
   { href: '/', label: 'Inicio' },
   { href: '/encuentros', label: 'Encuentros' },
   { href: '/proyectos', label: 'Proyectos' },
+  { href: '/instrumentos-sectoriales', label: 'Instrumentos Sectoriales' },
   { href: '/mesa-de-convergencia', label: 'Mesa de Convergencia' },
 ]
 

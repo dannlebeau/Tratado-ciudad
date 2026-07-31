@@ -41,11 +41,16 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         <div className="rounded-xl bg-slate-700 text-white px-6 py-5 flex items-center justify-between flex-wrap gap-3">
           <p className="text-sm text-slate-200">
-            Una gran ventaja: damos este paso en una ruta trazada. Desde 2022, la Mesa de Convergencia ya suma más de 10 proyectos ejecutados o en diseño.
+            Una gran ventaja: damos este paso en una ruta trazada. Desde 2022, la Mesa de Convergencia ya suma más de 10 proyectos ejecutados o en diseño, articulados con los instrumentos de planificación sectorial de la comuna.
           </p>
-          <Link href="/mesa-de-convergencia" className="shrink-0 px-4 py-2 rounded-full bg-red-600 hover:bg-red-500 text-sm font-semibold transition-colors">
-            Conocer la Mesa de Convergencia
-          </Link>
+          <div className="shrink-0 flex flex-wrap gap-3">
+            <Link href="/mesa-de-convergencia" className="px-4 py-2 rounded-full bg-red-600 hover:bg-red-500 text-sm font-semibold transition-colors">
+              Conocer la Mesa de Convergencia
+            </Link>
+            <Link href="/instrumentos-sectoriales" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sm font-semibold transition-colors">
+              Ver instrumentos sectoriales
+            </Link>
+          </div>
         </div>
       </section>
 
