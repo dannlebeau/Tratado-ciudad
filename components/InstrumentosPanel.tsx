@@ -17,7 +17,7 @@ export default function InstrumentosPanel() {
           aria-pressed={vista === 'vigentes'}
           className={`rounded-2xl p-6 sm:p-8 min-h-40 sm:min-h-56 flex flex-col justify-between text-left transition-colors ${
             vista === 'vigentes'
-              ? 'bg-red-600 text-white'
+              ? 'bg-emerald-600 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
           }`}
         >
@@ -33,7 +33,7 @@ export default function InstrumentosPanel() {
           aria-pressed={vista === 'no-existe'}
           className={`rounded-2xl p-6 sm:p-8 min-h-40 sm:min-h-56 flex flex-col justify-between text-left transition-colors ${
             vista === 'no-existe'
-              ? 'bg-slate-700 text-white'
+              ? 'bg-red-600 text-white'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
           }`}
         >
