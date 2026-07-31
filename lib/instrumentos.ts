@@ -84,3 +84,18 @@ export const INSTRUMENTOS_SECTORIALES: InstrumentoSectorial[] = [
     ],
   },
 ]
+
+export type InstrumentoFaltante = {
+  id: string
+  nombre: string
+  sigla?: string
+}
+
+// Instrumentos que la comuna todavía no tiene formalizados, según indicó el
+// usuario del proyecto (no vienen de la "Síntesis de instrumentos
+// sectoriales"). Es una lista corta a propósito: si aparece uno nuevo, se
+// agrega acá en vez de inferirlo.
+export const INSTRUMENTOS_NO_EXISTENTES: InstrumentoFaltante[] = [
+  { id: 'plan-emergencia', nombre: 'Plan Comunal de Emergencia' },
+  { id: 'prrd', nombre: 'Plan de Reducción de Riesgo de Desastres', sigla: 'PRRD' },
+]

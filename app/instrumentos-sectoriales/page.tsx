@@ -1,5 +1,4 @@
-import { INSTRUMENTOS_SECTORIALES } from '@/lib/instrumentos'
-import InstrumentoCard from '@/components/InstrumentoCard'
+import InstrumentosPanel from '@/components/InstrumentosPanel'
 
 export default function InstrumentosSectorialesPage() {
   return (
@@ -7,15 +6,11 @@ export default function InstrumentosSectorialesPage() {
       <p className="text-xs uppercase tracking-widest text-red-600 font-semibold mb-2">La ruta trazada</p>
       <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">Instrumentos sectoriales</h1>
       <p className="text-gray-500 dark:text-gray-400 max-w-2xl mb-6">
-        Planes municipales y sectoriales vigentes en Mejillones con los que el Acuerdo de Ciudad se articula: no son
+        Planes municipales y sectoriales de Mejillones con los que el Acuerdo de Ciudad se articula: no son
         iniciativas del proceso de Encuentros ni de la Mesa de Convergencia, sino la planificación previa sobre la
-        que se construye.
+        que se construye. Toca cada lámina para ver el detalle.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {INSTRUMENTOS_SECTORIALES.map(instrumento => (
-          <InstrumentoCard key={instrumento.id} instrumento={instrumento} />
-        ))}
-      </div>
+      <InstrumentosPanel />
     </main>
   )
 }
