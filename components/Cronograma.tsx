@@ -4,7 +4,7 @@ export default function Cronograma() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3">
       {CRONOGRAMA.map((etapa, i) => (
-        <div key={etapa.mes} className="relative">
+        <div key={`${etapa.mes}-${etapa.titulo}`} className="relative">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-2 h-2 rounded-full bg-red-600 shrink-0" />
             <span className="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500">

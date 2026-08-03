@@ -6,7 +6,7 @@ export default function EncuentrosTimeline() {
       {ENCUENTROS.map(e => (
         <div key={e.numero} className="rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
           <div className="bg-red-600 text-white px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-wide opacity-80">Encuentro {e.numero} · {e.mes}</p>
+            <p className="text-xs font-semibold uppercase tracking-wide opacity-80">Encuentro {e.numero} · {e.fecha}</p>
             <p className="text-sm font-semibold mt-1 leading-snug">{e.pregunta}</p>
           </div>
           <div className="p-4 bg-white dark:bg-gray-900">
