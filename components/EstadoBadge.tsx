@@ -2,6 +2,7 @@ import { type EstadoProyecto } from '@/lib/proyectos'
 
 const ESTILO: Record<EstadoProyecto, string> = {
   'Por confirmar': 'bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400',
+  'En Cartera': 'bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400',
   Desarrollo: 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300',
   Financiado: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300',
   Ejecución: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',

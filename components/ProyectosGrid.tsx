@@ -41,7 +41,7 @@ export default function ProyectosGrid() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {proyectos.map(p => (
-          <ProyectoCard key={p.numero} proyecto={p} />
+          <ProyectoCard key={p.numero ?? p.nombre} proyecto={p} />
         ))}
       </div>
     </div>
