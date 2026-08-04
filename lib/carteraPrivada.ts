@@ -46,11 +46,15 @@ export const ALIANZAS_LOCALES: AlianzaLocal[] = [
     nombre: 'Diseño Centro de Excelencia Operacional Portuaria',
     empresa: 'Ultraport',
     descripcion: 'Financiamiento privado directo para fortalecer el capital humano local.',
-    montoTexto: '$46.152.581',
   },
   {
     nombre: 'Estudio territorial Plan Mejillones 2050',
     empresa: 'Ultramar',
     descripcion: 'Financiamiento privado para el desarrollo del estudio de macro-planificación de la comuna.',
+  },
+  {
+    nombre: 'Cowork Mejillones',
+    empresa: 'Puerto Angamos',
+    descripcion: 'Espacio de coworking construido por la empresa para uso de la comunidad.',
   },
 ]

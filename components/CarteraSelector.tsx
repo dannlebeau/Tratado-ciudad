@@ -4,13 +4,15 @@ import { PROYECTOS } from '@/lib/proyectos'
 import { CARTERA_BIP } from '@/lib/carteraPublica'
 import { CARTERA_MOP } from '@/lib/carteraMOP'
 import { CARTERA_SEA, ALIANZAS_LOCALES } from '@/lib/carteraPrivada'
+import { AREAS_PLADECO_TOTAL } from '@/lib/carteraPladeco'
 import ProyectosGrid from './ProyectosGrid'
 import FinanciamientoTabla from './FinanciamientoTabla'
 import CarteraPublicaTabla from './CarteraPublicaTabla'
 import CarteraMOPGrid from './CarteraMOPGrid'
 import CarteraPrivadaGrid from './CarteraPrivadaGrid'
+import CarteraPladecoPanel from './CarteraPladecoPanel'
 
-type Cartera = 'huella-local' | 'publica' | 'mop' | 'privada'
+type Cartera = 'huella-local' | 'publica' | 'mop' | 'privada' | 'pladeco'
 
 const OPCIONES: { id: Cartera; titulo: string; subtitulo: string; total: number; activo: string; inactivo: string }[] = [
   {
@@ -45,6 +47,14 @@ const OPCIONES: { id: Cartera; titulo: string; subtitulo: string; total: number;
     activo: 'bg-amber-700 text-white',
     inactivo: 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700',
   },
+  {
+    id: 'pladeco',
+    titulo: 'PLADECO',
+    subtitulo: 'Plan de Desarrollo Comunal',
+    total: AREAS_PLADECO_TOTAL.nIniciativas,
+    activo: 'bg-emerald-700 text-white',
+    inactivo: 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700',
+  },
 ]
 
 export default function CarteraSelector() {
@@ -52,7 +62,7 @@ export default function CarteraSelector() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         {OPCIONES.map(op => (
           <button
             key={op.id}
@@ -86,6 +96,7 @@ export default function CarteraSelector() {
         {cartera === 'publica' && <CarteraPublicaTabla />}
         {cartera === 'mop' && <CarteraMOPGrid />}
         {cartera === 'privada' && <CarteraPrivadaGrid />}
+        {cartera === 'pladeco' && <CarteraPladecoPanel />}
       </div>
     </div>
   )

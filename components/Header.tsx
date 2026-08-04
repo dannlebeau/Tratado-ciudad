@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 const LINKS = [
   { href: '/', label: 'Inicio' },
   { href: '/encuentros', label: 'Encuentros' },
+  { href: '/calendario', label: 'Calendario' },
   { href: '/proyectos', label: 'Proyectos' },
   { href: '/instrumentos-sectoriales', label: 'Instrumentos Sectoriales' },
   { href: '/mesa-de-convergencia', label: 'Mesa de Convergencia' },
